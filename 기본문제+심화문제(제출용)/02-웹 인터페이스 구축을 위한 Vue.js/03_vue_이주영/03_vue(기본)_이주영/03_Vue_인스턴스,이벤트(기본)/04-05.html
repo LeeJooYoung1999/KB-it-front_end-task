@@ -1,0 +1,38 @@
+<!-- //사용자로 입력한 숫자를 이용하여 1에서부터의 합을 출력하도록 메서드를 정의하세요. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-05</title>
+  </head>
+
+  <body>
+    <div id="app">
+      1보다 큰수 : <input id="a" type="text" v-model.number="num" />
+      <br />
+      1부터 입력한 값까지의 합 : <span>{{sum()}}</span><br />
+      1부터 입력한 값까지의 합 : <span>{{sum()}}</span><br />
+      1부터 입력한 값까지의 합 : <span>{{sum()}}</span><br />
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      let = Vue.createApp({
+        name: "App",
+        data() {
+          return { num: 0 };
+        },
+        methods: {    //methods옵션에 1부터 n까지의 합을 구하는 사용자정의함수 sum을 정의.
+          sum() {
+            console.log("## num : " + this.num);
+            let n = parseInt(this.num);
+            //예외처리: 만약입력한 값이 숫자가 아니면 0을 반환.
+            if (Number.isNaN(n)) return 0;
+            return (n * (n + 1)) / 2;   //반복문X, 등차수열의 합 공식을 이용한다.
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

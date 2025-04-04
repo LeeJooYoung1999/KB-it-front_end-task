@@ -1,0 +1,26 @@
+<!-- //사용자의 입력을 양방향으로 바인딩디도록 다음코드를 완성하세요 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-04</title>
+  </head>
+  <body>
+    <div id="app">
+      <input id="a" type="text" v-model="name" />  <!-- //양방향 바인딩할것이 지시되었으므로, v-model 사용 -->
+      <br />
+      입력하신 이름 : <span>{{name}}</span>
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      let vm = Vue.createApp({
+        name: "App",
+        data() {
+          return { name: "" };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

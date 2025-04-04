@@ -1,0 +1,30 @@
+body {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#menu {
+  width: 260px;
+  float: left;
+}
+#section {
+  width: 700px;
+  float: left;
+}
+li {
+  list-style: none;
+}
+/* 미디어쿼리 적용 */
+@media screen and (max-width: 767px) {
+  body {
+    width: auto;
+  }
+  #menu {
+    width: auto;
+    float: none;
+  }
+  #section {
+    width: auto;
+    float: none;
+  }
+}

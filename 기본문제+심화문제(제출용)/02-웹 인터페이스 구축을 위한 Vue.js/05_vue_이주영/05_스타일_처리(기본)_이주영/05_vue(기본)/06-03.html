@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>06-03</title>
+  </head>
+  <body>
+    <div id="app">
+      <button id="btn1" :style="[ myColor, myLayout ]">버튼1</button>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      var vm = Vue.createApp({
+        name: "App",
+        data() {
+          return {
+            myColor: { 
+              backgroundColor: "purple",  //배경색 보라색  //케밥케이스 ->카멜케이스 로 바뀐것을 알수있다.
+              color: "yellow"             //글자색 노란색
+            },
+            myLayout: { 
+              width: "150px", 
+              height: "80px", 
+              textAlign: "center" //텍스트 중앙 정력
+            },
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

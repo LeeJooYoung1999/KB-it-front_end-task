@@ -1,0 +1,51 @@
+<!-- //입금(deposit)과 출금(withdraw)메서드를 추가하세요. -->
+
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-02</title>
+  </head>
+  <body>
+    <div id="app">
+      금액 : <input type="text" v-model.number="amount" /><br />
+      <button @click="deposit">입금</button>
+      <button @click="withdraw">인출</button>
+      <br />
+      <h3>계좌 잔고 : {{balance}}</h3>
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      let vm = Vue.createApp({
+        name: "App",
+        data() {
+          return { amount: 0, balance: 0 };
+        },
+        methods: {
+          deposit() {
+            let amt = parseInt(this.amount);
+            //입금시의 예외처리: 0보다 작은값은 예금불가
+            if (amt <= 0) {
+              alert("0보다 큰 값을 예금해야 합니다");
+            } else {
+              this.balance += amt;
+            }
+          },
+          withdraw() {
+            let amt = parseInt(this.amount);
+            //출금시의 예외처리1: 0보다 작은값은 출금불가
+            if (amt <= 0) {
+              alert("0보다 큰 값을 인출할 수 있습니다");
+            //출금시의 예외처리2: 잔고보다 많은 금액은 출금불가
+            } else if (amt > this.balance) {
+              alert("잔고보다 많은 금액을 인출할 수 없습니다");
+            } else {
+              this.balance -= amt;
+            }
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

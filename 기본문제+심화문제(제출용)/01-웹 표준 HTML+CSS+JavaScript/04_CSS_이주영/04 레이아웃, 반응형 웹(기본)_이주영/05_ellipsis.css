@@ -1,0 +1,9 @@
+h1,
+p {width: 300px;}
+
+/* 거의 관용구처럼 쓰이는 ellipsis효과 css문 */
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

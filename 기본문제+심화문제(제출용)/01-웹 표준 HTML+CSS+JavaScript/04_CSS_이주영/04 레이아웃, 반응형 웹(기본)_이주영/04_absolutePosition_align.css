@@ -1,0 +1,13 @@
+body {
+    background: red;
+  }
+  #container {
+    width: 500px;
+    height: 250px;
+    background: orange;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -125px;
+  }

@@ -1,0 +1,30 @@
+<!-- 체크박스를 체크하면 Yes, 체크하지 않으면 No값을 갖도록 다음 코드를 완성하시오 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-06</title>
+  </head>
+  <body>
+    <div id="app">
+      위의 내용에 동의하십니까?
+      <input type="checkbox" v-model="agree" true-value="yes" false-value="no" />  <!-- //체크박스의 boolean값에 양방향 바인딩. -->
+      <hr />
+      <span>선택된 값 : {{agree}}</span>
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      let model = { message: "Hello Vue3!" };
+      let vm = Vue.createApp({
+        name: "App",
+        data() {
+          return {
+            agree: "no",  //체크박스의 초기값 no로 설정.
+          };
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

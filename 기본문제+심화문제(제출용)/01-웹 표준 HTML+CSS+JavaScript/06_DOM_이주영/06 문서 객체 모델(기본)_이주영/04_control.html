@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>04_control</title>
+    <script>
+      window.onload = function () {
+        let output = '';
+        for (let i = 0; i < 10; i++) {
+          output += '<h1>Header - ' + i + '</h1>';
+        }
+        // 한번은단순텍스트로출력(html태그이스케이프함)
+        document.body.textContent = output;
+        //  한번은HTML 태그가적용되도로출력
+        // document.body.innerHTML = output;
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

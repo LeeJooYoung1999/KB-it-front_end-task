@@ -1,0 +1,9 @@
+div.container {
+  overflow: hidden;   /* 자식에게 float적용시 주변요소가 빈자리로 넘쳐 흐르는걸 방지하는 스킬 */
+}
+div.item {
+  float: left;
+  margin: 3px;
+  padding: 10px;
+  border: 1px solid black;
+}

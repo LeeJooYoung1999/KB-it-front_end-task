@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>05_control_style</title>
+    <script>
+      window.onload = function () {
+        let output = '';
+        for (let i = 0; i < 256; i++) {
+          output += '<div></div>';
+        }
+        document.body.innerHTML = output;
+
+        let divs = document.querySelectorAll('div');
+        for (let i = divs.length; i >= 0; i--) {
+          console.log(
+            'i-',
+            i,
+            'divs.length-',
+            divs.length,
+            'divs.length-i',
+            divs.length - i
+          );
+
+          let div = divs[divs.length - i]; 
+          div.style.height = '2px';
+          div.style.background = 'rgb(' + i + ',' + i + ',' + i + ')';
+        }
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

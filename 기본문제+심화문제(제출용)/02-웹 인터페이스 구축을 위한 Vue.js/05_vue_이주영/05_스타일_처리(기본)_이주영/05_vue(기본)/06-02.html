@@ -1,0 +1,36 @@
+<!-- //앞의 06-01에서 각각의 스타일 값을 개별적인 data변수로 지정하여 버튼의 스타일로 지정하세요 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>06-02</title>
+  </head>
+  
+  <body>
+    <div id="app">
+      <button id="a" :style="{ backgroundColor:bgColor, color }" @mouseover.stop="overEvent" @mouseout.stop="outEvent">  <!-- 각각의 스타일 값을 개별적인 data변수로 지정 -->
+        테스트
+      </button>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      let vm = Vue.createApp({
+        name: "App",
+        data() {
+          return { bgColor: "aqua", color: "black" };
+        },
+        methods: {
+          overEvent() {
+            this.bgColor = "purple";
+            this.color = "yellow";
+          },
+          outEvent() {
+            this.bgColor = "aqua";
+            this.color = "black";
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

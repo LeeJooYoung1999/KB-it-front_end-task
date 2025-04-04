@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>06-01</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <button id="a" :style="style1" @mouseover.stop="overEvent" @mouseout.stop="outEvent">테스트</button>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      let vm = Vue.createApp({
+        name: "App",
+        data() {
+          return {
+            //평상시 스타일 style1 
+            style1: { 
+              backgroundColor: "aqua", 
+              color: "black" },
+          };
+        },
+        methods: {
+          //버튼에 마우스가 올라올때 (배경색>>보라색 , 글자색>>노랑색)
+          overEvent() {
+            this.style1.backgroundColor = "purple";
+            this.style1.color = "yellow";
+          },
+          //버튼에서 마우스가 빠져나갈때 (style1으로 회귀)
+          outEvent() {
+            this.style1.backgroundColor = "aqua";
+            this.style1.color = "black";
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+body {
+  width: 500px;
+  margin: 10px auto;
+}
+#middle {
+  overflow: hidden;
+}
+#left {
+  float: left;
+  width: 150px;
+  background: red;
+}
+#right {
+  float: right;
+  width: 350px;
+  background: blue;
+}
+#top {
+  background: green;
+}
+#bottom {
+  background: purple;
+}

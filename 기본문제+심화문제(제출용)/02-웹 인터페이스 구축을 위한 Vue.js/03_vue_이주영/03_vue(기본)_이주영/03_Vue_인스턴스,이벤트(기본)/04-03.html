@@ -1,0 +1,37 @@
+<!-- //사용자가 입력한 숫자를 이용하여 1에서부터 합을 계산된 속성(Sum)으로 정의하세요 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-03</title>
+  </head>
+  <body>
+    <div id="app">
+      1보다 큰수 : <input id="a" type="text" v-model.number="num" />  <!-- //양방향 바인딩, 숫자형 데이터 -->
+      <br />
+      1부터 입력한 값까지의 합 : <span>{{sum}}</span><br />
+      1부터 입력한 값까지의 합 : <span>{{sum}}</span><br />
+      1부터 입력한 값까지의 합 : <span>{{sum}}</span><br />
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript">
+      var vm = Vue.createApp({
+        name: "App",
+        data() {
+          return { num: 0 };
+        },
+        computed: {         //계산된 값 : computed
+          sum() {          //계산된 속성 Sum
+            console.log("## num : " + this.num);
+            let n = parseInt(this.num);  //input의 type이 text라 문자열형태로 입력되는 num을 숫자형으로 변환해주는 parsint를 사용해준다.
+            //예외처리: 만약입력한 값이 숫자가 아니면 0을 반환.
+            if (Number.isNaN(n)) return 0;
+            return (n * (n + 1)) / 2;  //반복문X, 등차수열의 합 공식을 이용한다.
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

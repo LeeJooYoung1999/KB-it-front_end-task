@@ -1,0 +1,30 @@
+<!-- 다음 폼에서 전송버튼을 눌렀을때 사용자가 입력한 이름을 콘솔에 출력하세요 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01_ get_input</title>
+    <script>
+      window.onload = function () {
+        document.getElementById('btn').addEventListener(
+          'click',
+          function () {
+            let name = document.getElementById('name');
+            console.log(name.value);
+          },
+          false
+        );
+      };
+    </script>
+  </head>
+  <body>
+    <h1>01_ get_input</h1>
+    <hr />
+    <form>
+      <label for="name">이름:</label>
+      <input id="name" name="name" type="text" size="30" />
+      <input id="btn" type="button" value="전송" />
+    </form>
+  </body>
+</html>

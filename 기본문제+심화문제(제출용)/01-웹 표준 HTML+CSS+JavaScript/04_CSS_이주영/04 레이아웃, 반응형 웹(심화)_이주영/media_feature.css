@@ -1,0 +1,16 @@
+/* 모바일용 (기본, 미디어쿼리 적용X) */
+body {
+    background-color: red;
+}
+/* 태블릿용 미디어 쿼리 (화면 너비 768px 이상) */
+@media (min-width: 768px) {
+    body {
+        background-color: green;
+    }
+}
+/* 데스크톱용 미디어 쿼리 (화면 너비 1024px 이상) */
+@media (min-width: 1024px) {
+    body {
+        background-color: blue;
+    }
+}
