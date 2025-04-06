@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>etc_structure</title>
+	<style>
+		ul {
+			display: flex;
+			border-radius: 20px;
+			list-style: none;
+			height: 50px;
+		}
+		ul > li {
+			width: 90px;
+			text-align: center;
+			line-height: 50px;
+		}
+		ul li:first-child {
+			border-radius: 10px 0 0 10px;
+		}
+		ul li:last-child {
+			border-radius: 0 10px 10px 0;
+		}
+		li:nth-child(odd) {
+			background-color: brown;
+		}
+		li:nth-child(even) {
+			background-color: red;
+		}
+		ul:first-child {
+			border-radius: 20px 0 0 20px;
+		}
+		ul:last-child {
+			border-radius: 0 20px 20px 0;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>첫 번째</li>
+		<li>두 번째</li>
+		<li>세 번째</li>
+		<li>네 번째</li>
+		<li>다섯 번째</li>
+		<li>여섯 번째</li>
+		<li>일곱 번째</li>
+	</ul>
+</body>
+</html>

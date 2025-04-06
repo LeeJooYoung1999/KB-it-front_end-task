@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>join</title>
+  </head>
+  <body>
+    <h1>join</h1>
+    <form>
+      <fieldset style="width: 400px; border: 1px solid gray">
+        <legend>회원가입</legend>
+        <table>
+          <tr>
+            <th>사용자 ID</th>
+            <td><input id="nickname" type="text" /></td>
+          </tr>
+          <tr>
+            <th>비밀번호</th>
+            <td><input id="password" type="password" /></td>
+          </tr>
+          <tr>
+            <th>비밀번호 확인</th>
+            <td><input id="check_pw" type="password" /></td>
+          </tr>
+          <tr>
+            <th>이름</th>
+            <td><input id="name" type="text" /></td>
+          </tr>
+          <tr>
+            <th>성별</th>
+            <td>
+              <input id="male" type="radio" name="gender" value="m" />남
+              <input id="female" type="radio" name="gender" value="fm" />여
+            </td>
+          </tr>
+          <tr>
+            <th>취미</th>
+            <td>
+              <input class="sports" type="checkbox" />축구 <input class="sports" type="checkbox" />야구
+              <input class="sports" type="checkbox" />배구 <input class="sports" type="checkbox" />농구
+            </td>
+          </tr>
+          <tr>
+            <th>email</th>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <th>역할</th>
+            <td>
+              <select name="" id="">
+                <option value="어드민">ADMIN</option>
+                <option value="관리자">관리자</option>
+                <option value="일반회원">일반회원</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <input type="submit" value="확인" />
+        <input type="reset" value="다시쓰기" />
+      </fieldset>
+    </form>
+  </body>
+</html>
